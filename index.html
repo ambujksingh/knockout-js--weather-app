@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- jquery cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- <script src="bootstrapvalidator.min.js"></script> -->
+    
+    <!-- knockout js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"
+        integrity="sha512-2AL/VEauKkZqQU9BHgnv48OhXcJPx9vdzxN1JrKDVc4FPU/MEE/BZ6d9l0mP7VmvLsjtYwqiYQpDskK9dG8KBA=="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.4/knockout.validation.min.js" integrity="sha512-b99MDNv5TqiZtPKH2UeHzDAVydmgrOJEPtaPPEF8AgV86eYyqINFI/K7/7f0+R4WNTAVv8KvvpjwfOYHv5rd5g==" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header">
+            <div class="row headerRow">
+                <div class="col-6 header-1">
+                    Get Current Weather
+                </div>
+            </div>
+        </header>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-2 inputcenter">
+                <!-- <label for="validationCustom01" class="form-label">Enter State Name</label> -->
+                <input type="text" name="validationCustom04" class="form-control" id="validationCustom04" data-bind="value: State"
+                    placeholder="Enter your State">
+                    
+                <button type="submit" class="btn btn-primary" id="openWeatherbtn"
+                    data-bind="click: openWeatherbtn">Search State</button>
+                <button type="submit" class="btn btn-danger" id="danger" data-bind="click: refresh">Reset</button>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 list">
+                    <ul>
+                        <li>
+                            <h4>Weather Of: <span data-bind="text:CurrentweatherState"></span></h4>
+                        </li>
+                        <li>
+                            <h4>Weather: <img data-bind="attr:{src: imagePath}" /><span span
+                                    data-bind="text: Description"></span></h4>
+                        </li>
+                        <li>
+                            <h4>Temperature: <span data-bind="text: Temperature"></span>&deg;C</h4>
+                        </li>
+                        <li>
+                            <h4>Pressure: <span data-bind="text: Pressure"></span>hPa<h4>
+                        </li>
+                        <li>
+                            <h4>Humidity: <span data-bind="text: Humidity"></span>%</h4>
+                        </li>
+                    </ul>
+
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Min. Temperature</th>
+                            <th>Max. Temperature</th>
+                            <th>Wind Speed</th>
+                            <th>Wind Direction</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><span data-bind="text: MinTemperature"></span>&deg;C</td>
+                            <td class="text-center"><span data-bind="text: MaxTemperature"></span>&deg;C</td>
+                            <td class="text-center"><span data-bind="text: WindSpeed"></span>m/s</td>
+                            <td class="text-center"><span data-bind="text: WindDirection"></span>&deg;C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <strong class="text">Current Weather App</strong>
+        </div>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>

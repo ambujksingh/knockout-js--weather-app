@@ -1,0 +1,122 @@
+.container-fluid {
+  height: 705px;
+}
+
+.headerRow {
+  background-color: #429df9;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  /* width: 102%; */
+  margin-left: -12px;
+  height: 155px;
+}
+
+.header-1 {
+  margin-top: 71px;
+  margin-left: 307px;
+  font-weight: bolder;
+  font-size: 42px;
+}
+
+.inputcenter {
+  margin-left: 46%;
+}
+
+.City-name {
+  margin-left: 616px;
+  margin-top: 34px;
+}
+
+.btn,
+btn-primary {
+  margin-left: 69px;
+  margin-top: -69px;
+}
+
+#State {
+  margin-left: -180px;
+}
+
+.footer {
+  background-color: #429df9;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+#danger {
+  margin-left: 188px;
+  margin-top: -117px;
+}
+
+span {
+  color: #429df9;
+}
+
+.table > thead {
+  font-size: 21px;
+}
+
+.table > tbody {
+  font-size: 23px;
+}
+
+#validationCustom04 {
+  margin-left: -131px;
+  margin-top: 58px;
+}
+
+.list {
+  margin-left: 410px;
+}
+.table {
+  margin-top: 3%;
+}
+
+@media (max-width: 375px) {
+  .list {
+    margin-left: 0px;
+  }
+
+  .header-1 {
+    margin-top: 77px;
+    margin-left: 99px;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .inputcenter {
+    margin-left: 35%;
+    width: 43%;
+  }
+  .btn,
+  btn-primary {
+    margin-left: 29px;
+    margin-top: -69px;
+  }
+  #danger {
+    margin-left: 147px;
+    margin-top: -117px;
+  }
+  #validationCustom04 {
+    margin-left: -119px;
+    margin-top: 58px;
+  }
+
+  .table > thead {
+    font-size: 15px;
+  }
+
+  .table > tbody {
+    font-size: 15px;
+  }
+
+  .container-fluid {
+    height: 774px;
+  }
+
+  .table {
+    margin-top: 15%;
+  }
+}
